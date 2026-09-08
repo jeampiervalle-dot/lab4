@@ -84,7 +84,9 @@ fun ProgressBarSection() {
         LinearProgressIndicator(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(8.dp)
+                .height(10.dp),
+            color = MaterialTheme.colorScheme.primary,
+            trackColor = MaterialTheme.colorScheme.surfaceVariant,
         )
 
         Spacer(modifier = Modifier.height(8.dp))
@@ -94,8 +96,8 @@ fun ProgressBarSection() {
             progress = { progress },
             modifier = Modifier
                 .fillMaxWidth()
-                .height(8.dp),
-            color = MaterialTheme.colorScheme.primary,
+                .height(10.dp),
+            color = MaterialTheme.colorScheme.tertiary,
             trackColor = MaterialTheme.colorScheme.surfaceVariant,
         )
 
