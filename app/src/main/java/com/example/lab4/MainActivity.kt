@@ -134,7 +134,12 @@ fun SliderSection() {
             value = sliderValue,
             onValueChange = { sliderValue = it },
             valueRange = 0f..100f,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            colors = SliderDefaults.colors(
+                thumbColor = MaterialTheme.colorScheme.primary,
+                activeTrackColor = MaterialTheme.colorScheme.primary,
+                inactiveTrackColor = MaterialTheme.colorScheme.surfaceVariant,
+            )
         )
 
         Spacer(modifier = Modifier.height(8.dp))
@@ -151,8 +156,8 @@ fun SliderSection() {
             steps = 9,
             modifier = Modifier.fillMaxWidth(),
             colors = SliderDefaults.colors(
-                thumbColor = MaterialTheme.colorScheme.secondary,
-                activeTrackColor = MaterialTheme.colorScheme.secondary,
+                thumbColor = MaterialTheme.colorScheme.tertiary,
+                activeTrackColor = MaterialTheme.colorScheme.tertiary,
                 inactiveTrackColor = MaterialTheme.colorScheme.surfaceVariant,
             )
         )
@@ -165,7 +170,12 @@ fun SliderSection() {
             onValueChange = {},
             valueRange = 0f..100f,
             enabled = false,
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
+            colors = SliderDefaults.colors(
+                thumbColor = MaterialTheme.colorScheme.surfaceVariant,
+                activeTrackColor = MaterialTheme.colorScheme.surfaceVariant,
+                inactiveTrackColor = MaterialTheme.colorScheme.surface,
+            )
         )
     }
 }
